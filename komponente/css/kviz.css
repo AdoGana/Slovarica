@@ -1,0 +1,111 @@
+body{
+	background-image: url('../img/body.jpg');
+}
+h1{
+	text-align: center;
+	color: #E7E2E2;
+}
+
+a:focus{
+	text-decoration: none;
+}
+
+label {
+    font-size: 200%;
+}
+
+@media only screen 
+and (min-width : 0px)
+and (max-width : 760px) {
+
+   label {
+    font-size: 200%;
+   }
+   h1{
+	   font-size: 130%;
+   }
+
+}
+
+@media only screen 
+and (min-width : 761px)
+and (max-width : 950px) {
+
+    label{
+		font-size: 100%;
+    }
+}
+
+.linkovi{
+	font-family:  Snell Roundhand, cursive;
+	font-weight: bold;
+	color: blue;
+
+}
+
+.me h1 {
+	font-family: "Marck Script";
+	font-size: 50px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	float: right;
+	margin-right: 15px;
+	margin-top: 40px;
+}
+
+#ocisti h1{
+	color: grey;
+	font-weight: bold;
+	margin-top: 5px;
+	letter-spacing: 10px;
+	word-spacing: 20px;
+}
+
+#rijecNaslov{
+	font-family: Snell Roundhand, cursive;
+	margin-top: 40px;
+	letter-spacing: 5px;
+	word-spacing: 20px;
+}
+
+img{
+	width: 100px;
+	height: 50px;
+}
+
+.container{
+	width: 98%;
+}
+
+.writeline{
+	background-image: url('../img/board.jpg');
+	height: 143px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 5px solid black;
+	border-radius: 10px;
+}
+
+.caption > h1{
+	color: black;
+	font-size: 50px;
+	margin: 0px;
+}
+
+.thumbnail{
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+.ocisti{
+	width: 100%;
+	height: 60px;
+	font-family: Snell Roundhand, cursive;
+	background-color: grey;
+	border: 2px solid black;
+	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
+	background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
+	border-radius: 10px;
+}

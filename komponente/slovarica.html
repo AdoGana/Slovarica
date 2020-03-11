@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Slovarica</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/slovarica.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Marck+Script" />
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/slovarica.js"></script>
+	<script src="js/sound.js"></script>
+	<script src="js/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+	<ul class="nav nav-pills">
+		<li role="presentation" class="active linkovi"><a href="#">Slovarica</a></li>
+		<li role="presentation" class="linkovi"><a href="kviz.html">Kviz</a></li>
+		<li role="presentation" class="active linkovi" style="float:right; margin-right:20px"><a id="jezik"  href="#" onclick="setLang(this)">JEZIK: BOSANSKI</a></li>
+	</ul>
+	
+	<div class="container-fluid">
+		<div id="rijec" ondrop="drop(event, this)" ondragover="allowDrop(event)" class="col-xs-12 col-sm-12 col-md-12 writeline">
+			<h1 id="rijecNaslov">OVDJE PRENESI SLOVA</h1>
+		</div>
+		
+		<div class="row text-left" ng-controller="slovaCtrl">
+		    <div id="{{slovo.id}}" class="col-xs-6 col-sm-1 col-md-1" draggable="true" ondragstart="drag(event)" onclick="dodaj(event, this)" ng-repeat="slovo in slova">
+				<div class="btn thumbnail" onclick="playAudio(event)">
+					<div class="caption">
+						<label><a href="">{{slovo.name}}</a></label>
+					</div>
+					<img src="{{slovo.img}}" alt="slika">
+					<audio id="myAudio">
+				</div>
+		    </div>
+			<div class="me col-md-5"><h1>byG</h1></div>
+		</div>
+		
+		<div id="ocisti" class="btn ocisti" onclick="ocisti()"><h1>O B R I Š I</h1></div>
+	</div>
+</body>
+</html>
